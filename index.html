@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<meta name="mylead-verification" content="453c346deceef65f48b699deff0e53a6">
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -84,20 +83,25 @@
     .btn-container {
       margin: 30px 0;
     }
+    /* Modified to work perfectly as a clickable link */
     .action-btn {
+      display: inline-block;
       background: #2980b9;
       color: #ffffff;
-      border: none;
+      text-decoration: none;
       padding: 15px 40px;
       font-size: 16px;
       font-weight: bold;
       border-radius: 25px;
       cursor: pointer;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      transition: background 0.2s ease;
+      transition: background 0.2s ease, transform 0.1s ease;
     }
     .action-btn:hover {
       background: #2471a3;
+    }
+    .action-btn:active {
+      transform: scale(0.98);
     }
     .footer-text {
       font-size: 11px;
@@ -129,48 +133,17 @@
       To prevent server overload from automated scrapers and ensure proper package compatibility with your smartphone's operating system, you must pass our quick network verification security portal.
     </p>
 
+    <!-- THE DIRECT LINK BUTTON WITH REFERRER STRIPPING -->
     <div class="btn-container">
-      <!-- The button runs the official MyLead function signature directly -->
-      <button class="action-btn" onclick="if(typeof myleadLocker==='function'){myleadLocker();}else{alert('Portal loading, please try again in 2 seconds.');}">
+      <a href="https://clicknlook.space/iframe/f3f41798-60b9-11f1-a00a-8a5fb7be40ea" target="_blank" rel="noopener noreferrer" class="action-btn">
         🚀 ACCESS DOWNLOAD LINKS
-      </button>
+      </a>
     </div>
 
     <p class="footer-text">
       Secure Verification Terminal • Encrypted via Standard Web Protocols • Sponsored Actions verification keeps platform resources completely free.
     </p>
   </div>
-
-<script type="text/javascript" id="cpljs-f3f41798-60b9-11f1-a00a-8a5fb7be40ea" src="https://clickanlook.space/iframeLoader/f3f41798-60b9-11f1-a00a-8a5fb7be40ea"></script>
-<!-- CODES TRIGGER ADAPTER -->
-  <script type="text/javascript">
-    function openLocker() {
-        console.log("Initializing premium on-click conversion macro...");
-        
-        // This targets the exact layout functions packed inside MyLead's "After Click" scripts
-        if (typeof myleadLocker === "function") {
-            myleadLocker();
-        } else if (typeof call_locker === "function") {
-            call_locker();
-        } else if (typeof cpaLocker === "function") {
-            cpaLocker();
-        } else if (typeof showLocker === "function") {
-            showLocker();
-        } else {
-            // Ultimate fallback: If MyLead loads as a hidden inline overlay configuration,
-            // we manually trigger their primary standard style injector wrapper
-            try {
-                if (window.mylead && typeof window.mylead.show === "function") {
-                    window.mylead.show();
-                } else {
-                    alert("Initializing secure connection... please tap again in 2 seconds.");
-                }
-            } catch(e) {
-                console.error("Handshake initialization delay:", e);
-            }
-        }
-    }
-  </script>
 
 </body>
 </html>
