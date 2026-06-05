@@ -83,42 +83,29 @@
     .btn-container {
       margin: 30px 0;
     }
-    .action-btn {
+    .action-link {
       display: inline-block;
       background: #2980b9;
       color: #ffffff;
-      border: none;
+      text-decoration: none;
       padding: 15px 40px;
       font-size: 16px;
       font-weight: bold;
       border-radius: 25px;
-      cursor: pointer;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      transition: background 0.2s ease;
-      text-decoration: none;
+      transition: background 0.2s ease, transform 0.1s ease;
     }
-    .action-btn:hover {
+    .action-link:hover {
       background: #2471a3;
     }
-    
-    /* Target overlay container layout using CSS target properties */
-    .locker-overlay {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: rgba(0, 0, 0, 0.85);
-      z-index: 999999;
+    .action-link:active {
+      transform: scale(0.98);
     }
-    .locker-overlay:target {
-      display: block;
-    }
-    .locker-overlay iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
+    .footer-text {
+      font-size: 11px;
+      color: #999999;
+      margin-top: 50px;
+      line-height: 1.4;
     }
   </style>
 </head>
@@ -144,9 +131,9 @@
       To prevent server overload from automated scrapers and ensure proper package compatibility with your smartphone's operating system, you must pass our quick network verification security portal.
     </p>
 
-    <!-- The link now targets the overlay container ID directly via native HTML anchoring -->
+    <!-- This anchor uses target="_blank" to cleanly force open the working link in a fresh tab -->
     <div class="btn-container">
-      <a href="#verification-portal" class="action-btn">
+      <a href="https://clicknlook.space/iframe/f3f41798-60b9-11f1-a00a-8a5fb7be40ea" target="_blank" class="action-link">
         🚀 ACCESS DOWNLOAD LINKS
       </a>
     </div>
@@ -154,11 +141,6 @@
     <p class="footer-text">
       Secure Verification Terminal • Encrypted via Standard Web Protocols • Sponsored Actions verification keeps platform resources completely free.
     </p>
-  </div>
-
-  <!-- FIXED IFRAME OVERLAY CONTAINER -->
-  <div id="verification-portal" class="locker-overlay">
-    <iframe src="https://clicknlook.space/iframe/f3f41798-60b9-11f1-a00a-8a5fb7be40ea" sandbox="allow-top-navigation allow-scripts allow-same-origin allow-popups allow-forms"></iframe>
   </div>
 
 </body>
