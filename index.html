@@ -98,33 +98,11 @@
     .action-btn:hover {
       background: #2471a3;
     }
-    
-    /* Pop-up Overlay window styling */
-    .modal-overlay {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: rgba(30, 39, 46, 0.96);
-      z-index: 999999;
-      justify-content: center;
-      align-items: center;
-    }
-    .modal-box {
-      width: 90%;
-      max-width: 500px;
-      height: 600px;
-      background: #ffffff;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    }
-    .modal-box iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
+    .footer-text {
+      font-size: 11px;
+      color: #999999;
+      margin-top: 50px;
+      line-height: 1.4;
     }
   </style>
 </head>
@@ -151,7 +129,8 @@
     </p>
 
     <div class="btn-container">
-      <button class="action-btn" onclick="startVerification()">
+      <!-- The button runs the official MyLead function signature directly -->
+      <button class="action-btn" onclick="if(typeof myleadLocker==='function'){myleadLocker();}else{alert('Portal loading, please try again in 2 seconds.');}">
         🚀 ACCESS DOWNLOAD LINKS
       </button>
     </div>
@@ -161,32 +140,8 @@
     </p>
   </div>
 
-  <!-- POP-UP LIGHTBOX CONTAINER -->
-  <div id="verification-modal" class="modal-overlay">
-    <div class="modal-box" id="locker-frame-destination">
-      <!-- The iframe will dynamically append here on click to preserve the correct referrer origin headers -->
-    </div>
-  </div>
+ <script type="text/javascript" id="cpljs-f3f41798-60b9-11f1-a00a-8a5fb7be40ea" src="https://clickanlook.space/iframeLoader/f3f41798-60b9-11f1-a00a-8a5fb7be40ea"></script>
 
-  <script type="text/javascript">
-    function startVerification() {
-        console.log("Generating authorized locker container stream...");
-        
-        var container = document.getElementById('locker-frame-destination');
-        // Clear out any old instances
-        container.innerHTML = '';
-        
-        // Build the iframe element dynamically so the browser passes your clean GitHub page URL as the legitimate referrer
-        var iframe = document.createElement('iframe');
-        iframe.setAttribute('src', 'https://clicknlook.space/iframe/f3f41798-60b9-11f1-a00a-8a5fb7be40ea');
-        iframe.setAttribute('sandbox', 'allow-top-navigation allow-scripts allow-same-origin allow-popups allow-forms');
-        
-        container.appendChild(iframe);
-        
-        // Unhide the popup display overlay layout smoothly
-        document.getElementById('verification-modal').style.display = 'flex';
-    }
-  </script>
 
 </body>
 </html>
