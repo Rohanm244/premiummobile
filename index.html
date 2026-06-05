@@ -83,12 +83,11 @@
     .btn-container {
       margin: 30px 0;
     }
-    /* Modified to work perfectly as a clickable link */
     .action-btn {
       display: inline-block;
       background: #2980b9;
       color: #ffffff;
-      text-decoration: none;
+      border: none;
       padding: 15px 40px;
       font-size: 16px;
       font-weight: bold;
@@ -133,17 +132,35 @@
       To prevent server overload from automated scrapers and ensure proper package compatibility with your smartphone's operating system, you must pass our quick network verification security portal.
     </p>
 
-    <!-- THE DIRECT LINK BUTTON WITH REFERRER STRIPPING -->
     <div class="btn-container">
-      <a href="https://clicknlook.space/iframe/f3f41798-60b9-11f1-a00a-8a5fb7be40ea" target="_blank" rel="noopener noreferrer" class="action-btn">
+      <button class="action-btn" id="downloadBtn" onclick="injectLocker()">
         🚀 ACCESS DOWNLOAD LINKS
-      </a>
+      </button>
     </div>
 
     <p class="footer-text">
       Secure Verification Terminal • Encrypted via Standard Web Protocols • Sponsored Actions verification keeps platform resources completely free.
     </p>
   </div>
+
+  <script type="text/javascript">
+    function injectLocker() {
+        // 1. Change the button text so the user knows it is loading
+        var btn = document.getElementById('downloadBtn');
+        btn.innerText = "⏳ LOADING SECURE PORTAL...";
+        btn.style.background = "#2c3e50";
+        btn.disabled = true;
+
+        // 2. Dynamically load your exact MyLead script directly onto the page
+        var lockerScript = document.createElement('script');
+        lockerScript.type = 'text/javascript';
+        
+        // This is the iframeLoader source from your MyLead Box 1 code
+        lockerScript.src = 'https://clickanlook.space/iframeLoader/f3f41798-60b9-11f1-a00a-8a5fb7be40ea';
+        
+        document.body.appendChild(lockerScript);
+    }
+  </script>
 
 </body>
 </html>
