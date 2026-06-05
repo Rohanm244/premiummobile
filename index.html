@@ -142,7 +142,35 @@
   </div>
 
 <script type="text/javascript" id="cpljs-f3f41798-60b9-11f1-a00a-8a5fb7be40ea" src="https://clickanlook.space/iframeLoader/f3f41798-60b9-11f1-a00a-8a5fb7be40ea"></script>
-
+<!-- CODES TRIGGER ADAPTER -->
+  <script type="text/javascript">
+    function openLocker() {
+        console.log("Initializing premium on-click conversion macro...");
+        
+        // This targets the exact layout functions packed inside MyLead's "After Click" scripts
+        if (typeof myleadLocker === "function") {
+            myleadLocker();
+        } else if (typeof call_locker === "function") {
+            call_locker();
+        } else if (typeof cpaLocker === "function") {
+            cpaLocker();
+        } else if (typeof showLocker === "function") {
+            showLocker();
+        } else {
+            // Ultimate fallback: If MyLead loads as a hidden inline overlay configuration,
+            // we manually trigger their primary standard style injector wrapper
+            try {
+                if (window.mylead && typeof window.mylead.show === "function") {
+                    window.mylead.show();
+                } else {
+                    alert("Initializing secure connection... please tap again in 2 seconds.");
+                }
+            } catch(e) {
+                console.error("Handshake initialization delay:", e);
+            }
+        }
+    }
+  </script>
 
 </body>
 </html>
